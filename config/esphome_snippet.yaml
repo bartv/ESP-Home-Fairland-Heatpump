@@ -218,12 +218,12 @@ sensor:
 
   - platform: modbus_controller
     modbus_controller_id: fairland
-    name: “Voltage of PFC”
+    name: "Voltage of PFC"
     id: voltage_of_pfc
     register_type: read
     address: 0x2
     value_type: U_WORD
-    unit_of_measurement: “V”
+    unit_of_measurement: "V"
 
     
   - platform: modbus_controller
@@ -558,7 +558,7 @@ binary_sensor:
 
   - platform: modbus_controller
     modbus_controller_id: fairland
-    name: "PWP Error P8 Cooling Plate Sensor Failiure"
+    name: "PWP Error P8 Cooling Plate Sensor Failure"
     id: pwp_error_P8
     register_type: discrete_input
     address: 72
