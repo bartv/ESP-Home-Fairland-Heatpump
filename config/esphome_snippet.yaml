@@ -257,7 +257,7 @@ sensor:
     name: "PWP Ambient Air Temperature"
     id: pwp_ambient_air_temperature
     register_type: read
-    address: 0x4
+    address: 0x5
     value_type: U_WORD
     unit_of_measurement: "°C"
     filters:
@@ -298,6 +298,24 @@ sensor:
       return 0.0;
       }    
     update_interval: 1s
+
+  - platform: modbus_controller
+    modbus_controller_id: fairland
+    name: "PWP DC Fan speed"
+    id: pwp_dc_fan_speed_rpm
+    register_type: read
+    address: 14
+    value_type: U_WORD
+    unit_of_measurement: "RPM"
+
+  - platform: modbus_controller
+    modbus_controller_id: fairland
+    name: "PWP Voltage power supply"
+    id: pwp_voltage_power_supply
+    register_type: read
+    address: 30
+    value_type: U_WORD
+    unit_of_measurement: V
 
 ###################################################
 # Elements with Modbus Operation read 02 / write NA
